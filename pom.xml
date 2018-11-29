@@ -344,25 +344,24 @@
                                     </configuration>
                                 </plugin>
                                 <plugin>
-                                    <groupId>org.apache.maven.plugins</groupId>
                                     <artifactId>maven-javadoc-plugin</artifactId>
-                                    <version>2.10.4</version>
-                                    <executions>
-                                        <execution>
-                                            <id>attach-javadocs</id>
-                                            <phase>package</phase>
-                                            <goals>
-                                                <goal>jar</goal>
-                                            </goals>
-                                            <configuration>
-                                                <additionalparam>
-                                                    -inferrel -inferdep -hide java.* -collpackages
-                                                    java.util.* -attributes -operations
-                                                    -enumerations -enumconstants
-                                                </additionalparam>
-                                            </configuration>
-                                        </execution>
-                                    </executions>
+                                    <version>2.9.1</version>
+                                    <configuration>
+                                        <source>1.6</source>
+                                        <doclet>
+                                            gr.spinellis.umlgraph.doclet.UmlGraphDoc
+                                        </doclet>
+                                        <docletArtifact>
+                                            <groupId>gr.spinellis</groupId>
+                                            <artifactId>UmlGraph</artifactId>
+                                            <version>4.6</version>
+                                        </docletArtifact>
+                                        <additionalparam>
+                                            -inferrel -inferdep -hide java.* -collpackages
+                                            java.util.* -attributes -operations
+                                            -enumerations -enumconstants
+                                        </additionalparam>
+                                    </configuration>
                                 </plugin>
                                 <plugin>
                                     <groupId>org.apache.maven.plugins</groupId>
@@ -467,46 +466,25 @@
                             <xmlOutput>true</xmlOutput>
                         </configuration>
                     </plugin>
-                    <!--<plugin>-->
-                        <!--<artifactId>maven-javadoc-plugin</artifactId>-->
-                        <!--<version>2.7</version>-->
-                        <!--<configuration>-->
-                            <!--<source>1.6</source>-->
-                            <!--<doclet>-->
-                                <!--gr.spinellis.umlgraph.doclet.UmlGraphDoc-->
-                            <!--</doclet>-->
-                            <!--<docletArtifact>-->
-                                <!--<groupId>gr.spinellis</groupId>-->
-                                <!--<artifactId>UmlGraph</artifactId>-->
-                                <!--<version>4.6</version>-->
-                            <!--</docletArtifact>-->
-                            <!--<additionalparam>-->
-                                 <!-- -inferrel -inferdep -hide java.* -collpackages-->
-                                <!--java.util.* -attributes -operations-->
-                                 <!-- -enumerations -enumconstants-->
-                            <!--</additionalparam>-->
-                        <!--</configuration>-->
-                    <!--</plugin>-->
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>2.10.4</version>
-                        <executions>
-                            <execution>
-                                <id>attach-javadocs</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                                <configuration>
-                                    <additionalparam>
-                                        -inferrel -inferdep -hide java.* -collpackages
-                                        java.util.* -attributes -operations
-                                        -enumerations -enumconstants
-                                    </additionalparam>
-                                </configuration>
-                            </execution>
-                        </executions>
+                        <version>2.7</version>
+                        <configuration>
+                            <source>1.6</source>
+                            <doclet>
+                                gr.spinellis.umlgraph.doclet.UmlGraphDoc
+                            </doclet>
+                            <docletArtifact>
+                                <groupId>gr.spinellis</groupId>
+                                <artifactId>UmlGraph</artifactId>
+                                <version>4.6</version>
+                            </docletArtifact>
+                            <additionalparam>
+                                -inferrel -inferdep -hide java.* -collpackages
+                                java.util.* -attributes -operations
+                                -enumerations -enumconstants
+                            </additionalparam>
+                        </configuration>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
